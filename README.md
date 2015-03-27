@@ -3,14 +3,14 @@
 ## 翻译进度
 ### QUICK START
 |章节|翻译状态|英文文档是否完整|负责人|
-|----|--------|------|
+|----|----|----|------|
 |[Getting Started](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/GettingStarted.md)|未开始|完整|未指定|
 |[Tutorial](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/Tutorial.md)|未开始|完整|未指定|
 |[Videos](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/Videos.md)|未开始|完整|未指定|
 
 ### GUIDES
 |章节|翻译状态|英文文档是否完整|负责人|
-|----|--------|------|
+|----|----|----|------|
 |[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|未指定|
 |[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md.md)|未开始|完整|未指定|
 |[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|未指定|
@@ -18,7 +18,7 @@
 
 ### COMPONENTS
 |章节|翻译状态|英文文档是否完整|负责人|
-|----|--------|------|
+|----|----|----|------|
 |ActivityIndicatorIOS|未开始|尚无|未指定|
 |DatePickerIOS|未开始|尚无|未指定|
 |[Image](https://github.com/ecomfe/react-native-cn/blob/master/components/Image.md)|未开始|缺失|未指定|
@@ -41,7 +41,7 @@
 
 ### APIS
 |章节|翻译状态|英文文档是否完整|负责人|
-|----|--------|------|
+|----|----|----|------|
 |AlertIOS|未开始|尚无|未指定|
 |Animation|未开始|尚无|未指定|
 |AppRegistry|未开始|尚无|未指定|
@@ -61,7 +61,7 @@
 
 ### POLYFILLS
 |章节|翻译状态|英文文档是否完整|负责人|
-|----|--------|------|
+|----|----|----|------|
 |Flexbox|未开始|尚无|未指定|
 |Geolocation|未开始|尚无|未指定|
 |[Network](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Network.md)|未开始|尚无|未指定|
