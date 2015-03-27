@@ -2,19 +2,23 @@
 ## EFE Team
 ## 翻译进度
 ### QUICK START
-|目录|翻译状态|负责人|
+|章节|翻译状态|负责人|
 |----|--------|------|
 |Getting Started|未开始|未指定|
 |Tutorial|未开始|未指定|
 |Videos|未开始|未指定|
 
 ### GUIDES
+|章节|翻译状态|负责人|
+|----|--------|------|
 |Style|未开始|未指定|
 |Gesture Responder System|未开始|未指定|
 |Native Modules (iOS)|未开始|未指定|
 |Testing|未开始|未指定|
 
 ### COMPONENTS
+|章节|翻译状态|负责人|
+|----|--------|------|
 |ActivityIndicatorIOS|未开始|未指定|
 |DatePickerIOS|未开始|未指定|
 |Image|未开始|未指定|
@@ -36,6 +40,8 @@
 |WebView|未开始|未指定|
 
 ### APIS
+|章节|翻译状态|负责人|
+|----|--------|------|
 |AlertIOS|未开始|未指定|
 |Animation|未开始|未指定|
 |AppRegistry|未开始|未指定|
@@ -54,6 +60,8 @@
 |VibrationIOS|未开始|未指定|
 
 ### POLYFILLS
+|章节|翻译状态|负责人|
+|----|--------|------|
 |Flexbox|未开始|未指定|
 |Geolocation|未开始|未指定|
 |Network|未开始|未指定|
