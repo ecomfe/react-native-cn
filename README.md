@@ -14,6 +14,8 @@
 |[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|未指定|
 |[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md.md)|未开始|完整|未指定|
 |[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|未指定|
+|[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|未指定|
+|[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|未开始|完整|未指定|
 |[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|未指定|
 
 ### COMPONENTS
