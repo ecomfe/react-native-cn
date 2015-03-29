@@ -49,7 +49,7 @@ Congratulations! You've just successfully run and modified your first React Nati
 
 - 打开`AwesomeProkect.xcodeproj`，然在在`Xcode`中点击`run`运行
 - 用文本编辑器打开`index.ios.js`，编辑一些代码
-- 在iOS simulator中点击cmd + R([twice](http://openradar.appspot.com/19613391))来重载APP，并且观看之前的改动
+- 在iOS simulator中按cmd + R([twice](http://openradar.appspot.com/19613391))来重载APP，并且观察之前的改动
 
 恭喜！您刚刚成功的运行并且编写了您第一个React Native应用。
 
