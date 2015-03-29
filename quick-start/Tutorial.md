@@ -524,7 +524,7 @@ React Native要求安装OSX、Xcode、Homebrew、node、npm和[watchman](https:/
 
 ### 构造数据
 
-在我们编写代码来获取真实的`Rotten Tomatoes`的数据之前，让我们先构造一些假数据。在Facebook，我们一般会在JS文件最开始（requires下面）声明一些常量，但是您可以随意将下面的常量放在您喜欢的地方，在`inex.ios.js`中：
+在我们编写代码来获取真实的`Rotten Tomatoes`的数据之前，让我们先构造一些假数据来熟悉React Native。在Facebook，我们一般会在JS文件最开始（requires下面）声明一些常量，但是您可以随意将下面的常量放在您喜欢的地方，在`inex.ios.js`中：
 
 ```javascript
 var MOCKED_MOVIES_DATA = [
