@@ -4,8 +4,8 @@
 ### QUICK START
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|[Getting Started](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/GettingStarted.md)|未开始|完整|未指定|
-|[Tutorial](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/Tutorial.md)|未开始|完整|未指定|
+|[Getting Started](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/GettingStarted.md)|校对中|完整|pengxing|
+|[Tutorial](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/Tutorial.md)|进行中|完整|pengxing|
 |[Videos](https://github.com/ecomfe/react-native-cn/blob/master/quick-start/Videos.md)|未开始|完整|未指定|
 
 ### GUIDES
