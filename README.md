@@ -12,7 +12,7 @@
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
 |[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|未指定|
-|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md.md)|未开始|完整|未指定|
+|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|未指定|
 |[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|未指定|
 |[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|未指定|
 
