@@ -69,3 +69,61 @@ However, sometimes a parent will want to make sure that it becomes responder. Th
 ### PanResponder
 
 For higher-level gesture interpretation, check out [PanResponder](/react-native/docs/panresponder.html).
+
+##手势响应器系统
+在移动设备上的手势识别比web复杂很多。一个触摸事件需要通过一系列的过程，app才能明白用户的意图。比如，app需要确定触摸事件是滚动屏幕，滑动组件还是轻击。这些事件还可能在触摸过程中进行变化，此外还有多个触摸事件同时发生的情况。
+触摸响应器系统可以让各个组件处理它们触摸事件的交互而不必去了解他们的父组件和子组件。这个系统在 `ResponderEventPlugin.js` 中进行了实现，其中还包含了更加详细的文档和资料。
+
+
+### 最佳实践
+
+用户在使用web应用程序和原生应用程序时，感觉到巨大差异的最重要原因之一就在于手势识别的不同体验。（原生应用的）每一个操作都应该有以下的属性：
+- 反馈/高亮 - 告诉用户哪个元素在处理他的触摸事件以及用户结束他们的手势后会得到什么样的结果。
+- 撤销能力 - 当进行一个操作的时候，用户可以在触摸事件过程中通过拖拽移开自己的手指来中止本次操作。
+
+这些特性使用户在使用应用的时候更加的舒服，因为它允许用户进行实验性的交互，而不必担心犯错。
+
+### TouchableHighlight组件 和 Touchable*抽象类
+响应器系统用起来是非常复杂的。所以我们提供了一个抽象类`Touchable` 来实现可以轻击的对象，它通过使用响应器系统可以让你轻松的以声明的方式进行轻击交互的配置。你可以在web中使用按钮或者链接的任何地方使用 `TouchableHighlight` 组件.
+
+
+## 响应器的生命周期
+
+一个视图可以通过实现正确的方法成为一个触摸响应器。以下就是询问视图是否要成为一个响应器的2种方法：
+ - `View.props.onStartShouldSetResponder: (evt) => true,` - 这个视图想要在触摸的开始成为一个响应器么？
+ - `View.props.onMoveShouldSetResponder: (evt) => true,` - 在一个不是响应器视图上面的触摸事件，每一次触摸移动都会询问：这个视图是不是需要声明触摸响应。
+
+如果视图返回true，并且试图成为一个响应器，下面事件中的一个将会发生：
+ - `View.props.onResponderGrant: (evt) => {}` - 现在这个视图正在响应这些触摸事件。这时候可以开始反馈用户的触摸事件了。
+ - `View.props.onResponderReject: (evt) => {}` - 还有其他的东西在作为触摸的响应器，并且还未释放。
+ 
+如果视图开始响应了，下面这些处理程序就可以被调用了：
+ - `View.props.onResponderMove: (evt) => {}` - 用户在移动手指时触发
+ - `View.props.onResponderRelease: (evt) => {}` - 在触摸事件结束时触发，即"touchUp"。
+ - `View.props.onResponderTerminationRequest: (evt) => true` - 有其他的元素想要成为响应器。这个视图是否释放响应器？返回true则允许释放。
+ - `View.props.onResponderTerminate: (evt) => {}` - 作用在这个视图上的响应器已经被其他元素取代。可能是被其他视图的 `onResponderTerminationRequest` 方法调用后所取代，或者是被系统直接取代（经常发生在iOS中的控制中心或通知中心）。
+
+`evt` 是一个合成的触摸事件用于以下形式：
+
+ - `nativeEvent`
+     + `changedTouches` - 一个数组，它存储了自从上一个事件后所有发生改变的触摸事件。
+     + `identifier` - 触摸事件的ID
+     + `locationX` - 相对于元素的触摸X坐标
+     + `locationY` - 相对于元素的触摸Y坐标
+     + `pageX` - 相对于屏幕的触摸X坐标
+     + `pageY` - 相对于屏幕的触摸Y坐标
+     + `target` - 接受触摸事件元素的节点id
+     + `timestamp` - 一个触摸事件的时间戳，对计算速度很有用
+     + `touches` - 一个数组，记录当前屏幕上的触摸事件
+
+
+### 捕获 ShouldSet 处理程序
+
+`onStartShouldSetResponder` 和 `onMoveShouldSetResponder` 通过冒泡的方式被调用，即 最底层的组件最先被调用。这意味着最底层的组件将成为响应器，即使很多视图都对`*ShouldSetResponder`处理程序返回true。这种设计是非常合理的，它保证了所有组件和按钮都是可用的。 
+
+但是，有时候我们希望确定一个父节点成为响应器，可以通过捕获阶段来处理。在响应器系统开始从最底层开始冒泡之前，执行一个捕获事件`on*ShouldSetResponderCapture`。所以如果一个父视图想要阻止子视图在触摸开始时成为响应器，给父视图添加一个 `onStartShouldSetResponderCapture` 处理程序并返回true。
+
+
+### PanResponder
+
+想要看更高级的手势说明，请查看 [PanResponder](/react-native/docs/panresponder.html).
