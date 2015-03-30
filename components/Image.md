@@ -1,3 +1,56 @@
+A react component for displaying different types of images, including network images, static resources, temporary local images, and images from local disk, such as the camera roll.
+
+Example usage:
+
+```html
+renderImages: function() {
+  return (
+    <View>
+      <Image
+        style={styles.icon}
+        source={require('image!myIcon')}
+      />
+      <Image
+        style={styles.logo}
+        source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
+      />
+    </View>
+  );
+},
+```
+
+## Props 
+
+**accessibilityLabel** string 
+
+accessibilityLabel - Custom string to display for accessibility.
+
+**accessible** bool 
+
+accessible - Whether this element should be revealed as an accessible element.
+
+**capInsets** {top: number, left: number, bottom: number, right: number} 
+
+capInsets - When the image is resized, the corners of the size specified by capInsets will stay a fixed size, but the center content and borders of the image will be stretched. This is useful for creating resizable rounded buttons, shadows, and other resizable assets. More info:
+
+[https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIImage_Class/index.html#//apple_ref/occ/instm/UIImage/resizableImageWithCapInsets:](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIImage_Class/index.html#//apple_ref/occ/instm/UIImage/resizableImageWithCapInsets:)
+
+**source** {uri: string} 
+
+**style** style 
+
+├─[**Flexbox...**](http://facebook.github.io/react-native/docs/flexbox.html#proptypes)
+├─**backgroundColor** string
+├─**borderColor** string
+├─**borderRadius** number
+├─**borderWidth** number
+├─**opacity** number
+├─**resizeMode** Object.keys(ImageResizeMode)
+├─**tintColor** string
+└─**testID** string 
+
+testID - A unique identifier for this element to be used in UI Automation testing scripts.
+
 Displaying images is a fascinating subject, React Native uses some cool tricks to make it a better experience.
 
 ## No Automatic Sizing

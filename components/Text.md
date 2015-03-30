@@ -1,4 +1,60 @@
+A react component for displaying text which supports nesting, styling, and touch handling. In the following example, the nested title and body text will inherit the `fontFamily` from `styles.baseText`, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines:
 
+```javascript
+renderText: function() {
+  return (
+    <Text style={styles.baseText}>
+      <Text style={styles.titleText} onPress={this.onPressTitle}>
+        {this.state.titleText + '\n\n'}
+      </Text>
+      <Text numberOfLines={5}>
+        {this.state.bodyText}
+      </Text>
+    </Text>
+  );
+},
+...
+var styles = StyleSheet.create({
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+};
+```
+
+## Props 
+
+**numberOfLines** number 
+
+Used to truncate the text with an elipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number.
+
+**onPress** function 
+
+This function is called on press. Text intrinsically supports press handling with a default highlight state (which can be disabled with suppressHighlighting).
+
+**style** style 
+
+├─**View**#style...
+├─**color** string
+├─**containerBackgroundColor** string
+├─**fontFamily** string
+├─**fontSize** number
+├─**fontStyle** enum('normal', 'italic')
+├─**fontWeight** enum("normal", 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900')
+├─**lineHeight** number
+├─**textAlign** enum("auto", 'left', 'right', 'center')
+└─**writingDirection** enum("auto", 'ltr', 'rtl')
+
+**suppressHighlighting** bool 
+
+When true, no visual change is made when text is pressed down. By default, a gray oval highlights the text on press down.
+
+**testID** string 
+
+Used to locate this view in end-to-end tests.
 
 ## Nested Text
 
