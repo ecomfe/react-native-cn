@@ -1,5 +1,13 @@
 # React Native 文档翻译计划
 ## EFE Team
+## 翻译流程
+
+* issue中领取任务
+* 在working分支中完成翻译
+* commit上要带上#issueID关联到issue
+* issue中@ diysimon，通知review
+* 确认后merge到master分支
+
 ## 翻译进度
 ### QUICK START
 |章节|翻译状态|英文文档是否完整|负责人|
