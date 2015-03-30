@@ -199,17 +199,17 @@ subscription.remove();
 For more examples of sending events to JavaScript, see [`RCTLocationObserver`](https://github.com/facebook/react-native/blob/master/Libraries/Geolocation/RCTLocationObserver.m).
 
  
-有时候，一个 app 需要访问平台 API 能力，而 React Native 并没有对应的本地的包装器接口可供调用。可能你想要重用已经存在的 Objective-C 或 C++ 代码，而不想重新用 JavaScript 实现一遍。或者想写一些高性能、多线程的代码，比如图片处理、网络堆栈、数据库或者渲染。
+有时候，一个 app 需要访问平台 API 能力，而 React Native 并没有对应的 native 包装器接口可供调用。可能你想要重用现有的 Objective-C 或 C++ 代码，而不想用 JavaScript 再实现一遍。或者想写一些高性能、多线程的代码，比如图片处理、网络堆栈、数据库或者渲染。
 
-我们设计了 React Native 使得你可以写真实的本地代码和访问平台全部功能的代码成为可能。这是一个更加高级的特性，我们并不想把它只是作为通常开发流程的一部分，尽管它的存在是必须的。如果 React Native 并不支持你想要的本地功能特性，你应该可以自己构建它。
+我们设计了 React Native 使得你可以写真实的 native 代码和访问平台全部功能的能力成为可能。这是一个更加高级的特性，我们并不想把它只是作为一般开发流程的一部分，尽管它的存在是必须的。如果 React Native 并不支持你想要的 native 功能特性，你应该可以自己构建它。
 
-这是一个更加高级的入门文档，来向你展示如何构建一个本地的模块。我们假设读者都知道 Objective-C (Swift 当前还不支持)和核心的库（Foundation, UIKit）。
+这是一个更加高级的入门文档，来向你展示如何构建一个 native 的模块。我们假设读者都知道 Objective-C (Swift 当前还不支持)和核心的库（Foundation, UIKit）。
 
 ## iOS 日历模块例子
 
 这个文档将使用 [iOS Calendar API](https://developer.apple.com/library/mac/documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html) 例子。也就是说，我们想要通过 Javascript 访问 iOS 日历。
 
-本地模块只是一个 Objective-C 类，它实现了 `RCTBridgeModule` 协议。你不用觉得困惑，RCT 是 ReaCT 的简称。
+native 模块只是一个 Objective-C 类，它实现了 `RCTBridgeModule` 协议。你不用觉得困惑，RCT 是 ReaCT 的简称。
 
 ```objective-c
 // CalendarManager.h
@@ -219,7 +219,7 @@ For more examples of sending events to JavaScript, see [`RCTLocationObserver`](h
 @end
 ```
 
-React Native 不会暴露任何 `CalendarManager` 方法给 JavaScript，除非你显示要求。幸运的是，使用 `RCT_EXPORT` 相当简单：
+React Native 不会暴露任何 `CalendarManager` 方法给 JavaScript，除非你明确要求。幸运的是，使用 `RCT_EXPORT` 相当简单：
 
 ```objective-c
 // CalendarManager.m
@@ -243,11 +243,11 @@ CalendarManager.addEventWithName('Birthday Party', '4 Privet Drive, Surrey');
 
 要注意的是暴露的方法名称是从 Objective-C 选择符的第一部分产生的。有时候会导致一些不符合 JavaScript 语言命名习惯的名称（就像我们这个例子里所见到的）。你可以通过为 `RCT_EXPORT` 提供一个可选的参数来改变这个名称，比如 `RCT_EXPORT(addEvent)` 。
 
-该方法的返回类型应该始终是 `void` 。React Native 桥接是异步的，所以把结果返回给 JavaScript的唯一方式是通过回调或者发射事件形式（具体参见下面）。
+该方法的返回类型应该始终是 `void` 。React Native 桥接是异步的，所以把结果返回给 JavaScript 的方式只能是通过回调或者发射事件形式（具体参见下面）。
 
 ## 参数类型
 
-React Native 支持一些参数类型，可以直接从 JavaScript 代码传递给本地模块：
+React Native 支持一些参数类型，可以直接从 JavaScript 代码传递给 native 模块：
 
 - string (`NSString`)
 - number (`NSInteger`, `float`, `double`, `CGFloat`, `NSNumber`)
@@ -256,7 +256,7 @@ React Native 支持一些参数类型，可以直接从 JavaScript 代码传递�
 - map (`NSDictionary`) 字符串的 key 和 任何来自于这里所列的参数类型的 value 
 - function (`RCTResponseSenderBlock`)
 
-在我们的 `CalendarManager` 例子里，如果我们想要传递事件日期给本地模块，我们得把它转成字符串或者数字：
+在我们的 `CalendarManager` 例子里，如果我们想要传递事件日期给 native 模块，我们得把它转成字符串或者数字：
 
 ```objective-c
 - (void)addEventWithName:(NSString *)name location:(NSString *)location date:(NSInteger)secondsSinceUnixEpoch
@@ -266,7 +266,7 @@ React Native 支持一些参数类型，可以直接从 JavaScript 代码传递�
 }
 ```
 
-随着 `CalendarManager.addEvent` 方法变得越来越复杂，参数数量会越来越多。其中一些参数可能是可选的。在这种情况下，是时候考虑改变一下API的设计了，使其可以接受一个事件属性的字典，就像这样： 
+随着 `CalendarManager.addEvent` 方法变得越来越复杂，参数数量会越来越多。其中一些参数可能是可选的。这是可以考虑改变一下 API 的设计了，使其可以接受一个事件属性的字典，比如： 
 
 ```objective-c
 - (void)addEventWithName:(NSString *)name details:(NSDictionary *)details
@@ -289,7 +289,7 @@ CalendarManager.addEvent('Birthday Party', {
 
 > **注意**: 关于 array 和 map
 >
-> React Native 并没有为这些结构里的值的类型提供任何保证。你的本地模块可能期望接收一个字符串的数组，但是如果在 JavaScript 调用你的方法时候，传递了一个既包含数字又包含字符串的数组，你将会得到一个 `NSArray` 同时包含 `NSNumber` 和 `NSString` 类型的数据。这是开发者的职责，应该确保 array/map 的数据类型的正确性(参见 [`RCTConvert`](https://github.com/facebook/react-native/blob/master/React/Base/RCTConvert.h) 的一些助手方法)。
+> React Native 并没有为这些结构里的值的类型提供任何保证。你的 native 模块可能期望接收一个 string 的数组，但是如果在 JavaScript 调用你的方法时候，传递了一个既包含 number 又包含 string 的数组，你将会得到一个包含 `NSNumber` 和 `NSString` 类型的 `NSArray`。这是开发者的职责，应该确保 array/map 的数据类型的正确性(参见 [`RCTConvert`](https://github.com/facebook/react-native/blob/master/React/Base/RCTConvert.h) 的一些助手方法)。
 
 # 回调
 
@@ -297,7 +297,7 @@ CalendarManager.addEvent('Birthday Party', {
 >
 > 这部分内容相比其它部分更加偏试验性质，关于回调，我们还没有一系列的最佳实践可供参考。
 
-本地模块也支持一种特殊类型的参数 - 回调。在大部分情况，它用来给 JavaScript 提供函数执行结果的回调。
+native 模块也支持一种特殊类型的参数 - 回调。在大部分情况，它用来给 JavaScript 提供函数执行结果的回调。
 
 ```objective-c
 - (void)findEvents:(RCTResponseSenderBlock)callback
@@ -308,7 +308,7 @@ CalendarManager.addEvent('Birthday Party', {
 }
 ```
 
-`RCTResponseSenderBlock` 只接受一个参数 -  arguments 数组，用来传递给 JavaScript 回调。在这个例子，我们使用 node 风格来设置参数，第一个参数作为出错的参数信息，其它参数作为该函数的执行结果。
+`RCTResponseSenderBlock` 只接受一个参数 -  arguments 数组，用来传递给 JavaScript 回调。在这个例子，我们使用 node 风格来设置参数，第一个参数作为出错的参数信息，其余参数作为该函数的执行结果。
 
 ```javascript
 CalendarManager.findEvents((error, events) => {
@@ -320,13 +320,13 @@ CalendarManager.findEvents((error, events) => {
 })
 ```
 
-本地模块假定回调只被调用一次。当然，它也可以把回调先存储起来，过后再调用这个回调。这种模式经常被用来包装需要代理的 iOS API 接口。参见[`RCTAlertManager`](https://github.com/facebook/react-native/blob/master/React/Modules/RCTAlertManager.m)。
+native 模块假定回调只被调用一次。当然，它也可以把回调先存储起来，过后再调用这个回调。这种模式经常被用来包装需要代理的 iOS API 接口。参见[`RCTAlertManager`](https://github.com/facebook/react-native/blob/master/React/Modules/RCTAlertManager.m)。
 
 如果你想要传递类似错误对象的参数给 JavaScript，你可以使用 [`RCTUtils.h`](https://github.com/facebook/react-native/blob/master/React/Base/RCTUtils.h) 的 `RCTMakeError` 方法。
 
-## 实现本地模块
+## 实现 native 模块
 
-本地模块不应该有任何关于当前什么线程正在被调用的假设。React Native 在一个独立的顺序的 GCD 队列里调用本地模块方法，但这只是一个可能发生变化的实现细节。如果本地模块需要调用只是主线程的 iOS API，它应该在主队列里调度该操作：
+native 模块不应该有任何关于当前什么线程正在被调用的假设。React Native 在一个独立的顺序的 GCD 队列里调用 native 模块方法，但这只是一个可能发生变化的实现细节。如果 native 模块需要调用只是主线程的 iOS API，它应该在主队列里调度该操作：
 
 
 ```objective-c
@@ -342,11 +342,11 @@ CalendarManager.findEvents((error, events) => {
 }
 ```
 
-同样地，如果该操作可能需要花费比较长的时间去完成，本地模块不应该被阻塞。使用 `dispatch_async` 在后台队列里调度需要耗时更长的工作是一种更好的方式。
+同样地，如果该操作可能需要花费比较长的时间去完成，native 模块不应该被阻塞。使用 `dispatch_async` 在后台队列里调度需要耗时更长的工作是一种更好的方式。
 
 ## 导出常量
 
-本地模块可以导出给 JavaScript 在运行时环境下立刻能访问的常量。当需要导出一些初始化数据的时候，这通常非常有用，否则需要一个来回的桥接。
+native 模块可以导出给 JavaScript 在运行时环境下立刻能访问的常量。当需要导出一些初始化数据的时候，这通常非常有用，否则需要一个来回的桥接。
 
 ```objective-c
 - (NSDictionary *)constantsToExport
@@ -366,7 +366,7 @@ console.log(CalendarManager.firstDayOfTheWeek);
 
 ## 向 JavaScript 发送事件
 
-本地模块可以向 JavaScript 发送事件信号，而不需要直接调用 JavaScript。最简单方式是使用 `eventDispatcher`：
+native 模块可以向 JavaScript 发送事件信号，而不需要直接调用 JavaScript。最简单方式是使用 `eventDispatcher`：
 
 ```objective-c
 - (void)calendarEventReminderReceived:(NSNotification *)notification
