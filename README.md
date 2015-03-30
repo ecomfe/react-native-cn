@@ -19,10 +19,10 @@
 ### GUIDES
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|未指定|
-|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|未指定|
-|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|未指定|
-|[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|未指定|
+|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|zhoucumt|
+|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|chendatony31|
+|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|wuhy|
+|[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|ishenli|
 |[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|未开始|完整|zhoucumt|
 |[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|wuhy|
 
