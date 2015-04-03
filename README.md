@@ -1,5 +1,13 @@
 # React Native 文档翻译计划
 ## EFE Team
+## 翻译流程
+
+* issue中领取任务
+* 在working分支中完成翻译
+* commit上要带上#issueID关联到issue
+* issue中@ diysimon，通知review
+* 确认后merge到master分支
+
 ## 翻译进度
 ### QUICK START
 |章节|翻译状态|英文文档是否完整|负责人|
@@ -11,12 +19,12 @@
 ### GUIDES
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|未指定|
-|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|未指定|
-|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|未指定|
-|[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|未指定|
-|[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|未开始|完整|未指定|
-|[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|未指定|
+|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|zhoucumt|
+|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|chendatony31|
+|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|wuhy|
+|[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|ishenli|
+|[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|未开始|完整|zhoucumt|
+|[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|wuhy|
 
 ### COMPONENTS
 |章节|翻译状态|英文文档是否完整|负责人|
