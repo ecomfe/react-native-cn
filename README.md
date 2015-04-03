@@ -19,35 +19,35 @@
 ### GUIDES
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|未开始|完整|zhoucumt|
-|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|未开始|完整|chendatony31|
-|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|未开始|完整|wuhy|
+|[Style](https://github.com/ecomfe/react-native-cn/blob/master/guides/Style.md)|校对中|完整|zhoucumt|
+|[Gesture Responder System](https://github.com/ecomfe/react-native-cn/blob/master/guides/GestureResponderSystem.md)|校对中|完整|chendatony31|
+|[Native Modules (iOS)](https://github.com/ecomfe/react-native-cn/blob/master/guides/NativeModulesIOS.md)|校对中|完整|wuhy|
 |[Linking Libraries](https://github.com/ecomfe/react-native-cn/blob/master/guides/LinkingLibraries.md)|未开始|完整|ishenli|
-|[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|未开始|完整|zhoucumt|
-|[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|未开始|完整|wuhy|
+|[Debugging](https://github.com/ecomfe/react-native-cn/blob/master/guides/Debugging.md)|校对中|完整|zhoucumt|
+|[Testing](https://github.com/ecomfe/react-native-cn/blob/master/guides/Testing.md)|校对中|完整|wuhy|
 
 ### COMPONENTS
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|ActivityIndicatorIOS|未开始|尚无|未指定|
-|DatePickerIOS|未开始|尚无|未指定|
-|[Image](https://github.com/ecomfe/react-native-cn/blob/master/components/Image.md)|未开始|缺失|未指定|
-|ListView|未开始|尚无|未指定|
-|MapView|未开始|尚无|未指定|
-|Navigator|未开始|尚无|未指定|
-|NavigatorIOS|未开始|尚无|未指定|
-|PickerIOS|未开始|尚无|未指定|
-|ScrollView|未开始|尚无|未指定|
-|SliderIOS|未开始|尚无|未指定|
-|SwitchIOS|未开始|尚无|未指定|
-|TabBarIOS|未开始|尚无|未指定|
-|[Text](https://github.com/ecomfe/react-native-cn/blob/master/components/Text.md)|未开始|缺失|未指定|
-|TextInput|未开始|尚无|未指定|
-|TouchableHighlight|未开始|尚无|未指定|
-|TouchableOpacity|未开始|尚无|未指定|
-|TouchableWithoutFeedback|未开始|尚无|未指定|
-|View|未开始|尚无|未指定|
-|WebView|未开始|尚无|未指定|
+|[ActivityIndicatorIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/ActivityIndicatorIOS.md)|未开始|完整|未指定|
+|[DatePickerIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/DatePickerIOS.md)|未开始|完整|未指定|
+|[Image](https://github.com/ecomfe/react-native-cn/blob/master/components/Image.md)|未开始|完整|未指定|
+|[ListView](https://github.com/ecomfe/react-native-cn/blob/master/components/ListView.md)|未开始|完整|未指定|
+|[MapView](https://github.com/ecomfe/react-native-cn/blob/master/components/MapView.md)|未开始|完整|未指定|
+|[Navigator](https://github.com/ecomfe/react-native-cn/blob/master/components/Navigator.md)|未开始|完整|未指定|
+|[NavigatorIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/NavigatorIOS.md)|未开始|完整|未指定|
+|[PickerIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/PickerIOS.md)|未开始|完整|未指定|
+|[ScrollView](https://github.com/ecomfe/react-native-cn/blob/master/components/ScrollView.md)|未开始|完整|未指定|
+|[SliderIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/SliderIOS.md)|未开始|完整|未指定|
+|[SwitchIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/SwitchIOS.md)|未开始|完整|未指定|
+|[TabBarIOS]|未开始|尚无|未指定|
+|[Text](https://github.com/ecomfe/react-native-cn/blob/master/components/Text.md)|未开始|完整|未指定|
+|[TextInput](https://github.com/ecomfe/react-native-cn/blob/master/components/TextInput.md)|未开始|完整|未指定|
+|[TouchableHighlight](https://github.com/ecomfe/react-native-cn/blob/master/components/TouchableHighlight.md)|未开始|完整|未指定|
+|[TouchableOpacity](https://github.com/ecomfe/react-native-cn/blob/master/components/TouchableOpacity.md)|未开始|完整|未指定|
+|[TouchableWithoutFeedback](https://github.com/ecomfe/react-native-cn/blob/master/components/TouchableWithoutFeedback.md)|未开始|完整|未指定|
+|[View](https://github.com/ecomfe/react-native-cn/blob/master/components/View.md)|未开始|完整|未指定|
+|[WebView](https://github.com/ecomfe/react-native-cn/blob/master/components/WebView.md)|未开始|完整|未指定|
 
 ### APIS
 |章节|翻译状态|英文文档是否完整|负责人|
