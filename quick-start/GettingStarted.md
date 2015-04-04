@@ -53,4 +53,17 @@ Congratulations! You've just successfully run and modified your first React Nati
 
 恭喜！您刚刚成功的运行并且编写了您第一个React Native应用。
 
+## 备注
 
+额外有一步操作在官方文档中没有体现，否则会运行失败。具体如下，两种方式任选一种：
+
+打开项目中的`AppDelegate.m`
+- 方式一：找到这行代码：jsCodeLocation = [NSURL URLWithString:@"http://`localhost`:8081/index.ios.bundle"]，将localhost换成自己的ip
+- 方式二：
+  - 注释掉方式一中的代码
+  - 去掉`jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];`前面的注释。
+  - run `npm start`
+  - run `curl http://localhost:8081/index.ios.bundle -o main.jsbundle` 如果失败的话在后面加上`--ipv4`
+  - 在XCode中，右击你的项目文件夹，点击`New file`，选择你生成的`main.jsbundle`。
+- 推荐第一个方法比较简单。
+- 现在就可以在无无服务器的环境下运行你的app拉。

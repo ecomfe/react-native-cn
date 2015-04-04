@@ -8,7 +8,7 @@
 * issue中@ diysimon，通知review
 * 确认后merge到master分支
 
-## 翻译进度
+## 翻译进度shangwu
 ### QUICK START
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
@@ -40,7 +40,7 @@
 |[ScrollView](https://github.com/ecomfe/react-native-cn/blob/master/components/ScrollView.md)|未开始|完整|未指定|
 |[SliderIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/SliderIOS.md)|未开始|完整|未指定|
 |[SwitchIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/SwitchIOS.md)|未开始|完整|未指定|
-|[TabBarIOS]|未开始|尚无|未指定|
+|[TabBarIOS](https://github.com/ecomfe/react-native-cn/blob/master/components/TabBarIOS.md)|未开始|完整|未指定|
 |[Text](https://github.com/ecomfe/react-native-cn/blob/master/components/Text.md)|未开始|完整|未指定|
 |[TextInput](https://github.com/ecomfe/react-native-cn/blob/master/components/TextInput.md)|未开始|完整|未指定|
 |[TouchableHighlight](https://github.com/ecomfe/react-native-cn/blob/master/components/TouchableHighlight.md)|未开始|完整|未指定|
@@ -52,29 +52,29 @@
 ### APIS
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|AlertIOS|未开始|尚无|未指定|
-|Animation|未开始|尚无|未指定|
-|AppRegistry|未开始|尚无|未指定|
-|AppStateIOS|未开始|尚无|未指定|
-|AsyncStorage|未开始|尚无|未指定|
-|CameraRoll|未开始|尚无|未指定|
-|InteractionManager|未开始|尚无|未指定|
-|LayoutAnimation|未开始|尚无|未指定|
-|LinkingIOS|未开始|尚无|未指定|
-|NetInfo|未开始|尚无|未指定|
-|PanResponder|未开始|尚无|未指定|
-|[PixelRatio](https://github.com/ecomfe/react-native-cn/blob/master/apis/PixelRatio.md)|未开始|缺失|未指定|
-|PushNotificationIOS|未开始|尚无|未指定|
-|StatusBarIOS|未开始|尚无|未指定|
-|StyleSheet|未开始|尚无|未指定|
-|VibrationIOS|未开始|尚无|未指定|
+|[AlertIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/AlertIOS.md)|未开始|完整|未指定|
+|[Animation](https://github.com/ecomfe/react-native-cn/blob/master/apis/Animation.md)|未开始|完整|未指定|
+|[AppRegistry](https://github.com/ecomfe/react-native-cn/blob/master/apis/AppRegistry.md)|未开始|完整|未指定|
+|[AppStateIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/AppStateIOS.md)|未开始|完整|未指定|
+|[AsyncStorage](https://github.com/ecomfe/react-native-cn/blob/master/apis/AsyncStorage.md)|未开始|完整|未指定|
+|[CameraRoll](https://github.com/ecomfe/react-native-cn/blob/master/apis/CameraRoll.md)|未开始|完整|未指定|
+|[InteractionManager](https://github.com/ecomfe/react-native-cn/blob/master/apis/InteractionManager.md)|未开始|完整|未指定|
+|[LayoutAnimation](https://github.com/ecomfe/react-native-cn/blob/master/apis/LayoutAnimation.md)|未开始|完整|未指定|
+|[LinkingIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/LinkingIOS.md)|未开始|完整|未指定|
+|[NetInfo](https://github.com/ecomfe/react-native-cn/blob/master/apis/NetInfo.md)|未开始|完整|未指定|
+|[PanResponder](https://github.com/ecomfe/react-native-cn/blob/master/apis/PanResponder.md)|未开始|完整|未指定|
+|[PixelRatio](https://github.com/ecomfe/react-native-cn/blob/master/apis/PixelRatio.md)|未开始|完整|未指定|
+|[PushNotificationIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/PushNotificationIOS.md)|未开始|完整|未指定|
+|[StatusBarIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/StatusBarIOS.md)|未开始|完整|未指定|
+|[StyleSheet](https://github.com/ecomfe/react-native-cn/blob/master/apis/StyleSheet.md)|未开始|完整|未指定|
+|[VibrationIOS](https://github.com/ecomfe/react-native-cn/blob/master/apis/VibrationIOS.md)|未开始|完整|未指定|
 
 ### POLYFILLS
 |章节|翻译状态|英文文档是否完整|负责人|
 |----|----|----|------|
-|Flexbox|未开始|尚无|未指定|
-|Geolocation|未开始|尚无|未指定|
-|[Network](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Network.md)|未开始|尚无|未指定|
-|[Timers](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Timers.md)|未开始|尚无|未指定|
+|[Flexbox](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Flexbox.md)|未开始|完整|未指定|
+|[Geolocation](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Geolocation.md)|未开始|完整|未指定|
+|[Network](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Network.md)|未开始|完整|未指定|
+|[Timers](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Timers.md)|未开始|完整|未指定|
 
-* 状态包括：未开始|尚无、进行中、校对中、完成
+* 状态包括：未开始|完整、进行中、校对中、完成
