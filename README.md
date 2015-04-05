@@ -75,6 +75,6 @@
 |[Flexbox](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Flexbox.md)|未开始|完整|未指定|
 |[Geolocation](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Geolocation.md)|未开始|完整|未指定|
 |[Network](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Network.md)|未开始|完整|未指定|
-|[Timers](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Timers.md)|未开始|完整|未指定|
+|[Timers](https://github.com/ecomfe/react-native-cn/blob/master/polyfills/Timers.md)|校对中|完整|franckchen|
 
 * 状态包括：未开始|完整、进行中、校对中、完成
