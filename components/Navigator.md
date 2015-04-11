@@ -194,8 +194,6 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 当场景ref发生变化时，会以`(ref, indexInStack)`这样的形式来调用它
 
-_ps: 这里的ref应该是一个字符串标记_
-
 **onWillFocus** function 
 
 它覆盖了`this.props.navigator`中的处理器，并且在装载时以及每一个转场装换前，发出目标路由。这会覆盖`this.props.navigator`中的onDidFocus`处理器。
