@@ -194,6 +194,8 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 当场景ref发生变化时，以`(ref, indexInStack)`被调用
 
+__ps: 这里的ref应该是一个字符串标记__
+
 **onWillFocus** function 
 
 它覆盖了`this.props.navigator`中的处理器，并且在装载时以及每一个转场装换前，发出目标路由。这会覆盖`this.props.navigator`中的onDidFocus`处理器。
@@ -213,6 +215,6 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **shouldJumpOnBackstackPop** bool 
 
-退栈回退按钮应该用“跳”回取代弹出吗？按下android后退按钮后可能会发生一个前进，设置为true，这样所有场景都会保持已装载状态。
+退栈回退按钮应该用“跳”回取代弹出吗？如果按下android后退按钮后可能会发生一个前进，那设置为true，这样所有场景都会保持已装载状态。
 
 __ps: 最新版的react-native上似乎没有`shouldJumpOnBackstackPop`这一项了__
