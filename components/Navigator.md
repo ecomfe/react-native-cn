@@ -164,7 +164,7 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **configureScene** function 
 
-可选函数，用来配置场景的动画和手势。一般会以一个路由调用它，然后返回一个场景配置对象
+可选函数，用来配置场景的动画和手势。一般会以一个路由来调用它，然后返回一个场景配置对象
 
 ```javascript
 (route) => Navigator.SceneConfigs.FloatFromRight
@@ -192,9 +192,9 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **onItemRef** function 
 
-当场景ref发生变化时，以`(ref, indexInStack)`被调用
+当场景ref发生变化时，会以`(ref, indexInStack)`这样的形式来调用它
 
-__ps: 这里的ref应该是一个字符串标记__
+_ps: 这里的ref应该是一个字符串标记_
 
 **onWillFocus** function 
 
@@ -202,7 +202,7 @@ __ps: 这里的ref应该是一个字符串标记__
 
 **renderScene** function 
 
-必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个ref处理器被调用，该ref处理器允许让你的场景的ref由`props.onItemRef`来提供
+必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个ref处理器来调用它，该ref处理器允许让你的场景的ref由`props.onItemRef`来提供
 
 ```javascript
 (route, navigator, onRef) =>
@@ -217,4 +217,4 @@ __ps: 这里的ref应该是一个字符串标记__
 
 退栈回退按钮应该用“跳”回取代弹出吗？如果按下android后退按钮后可能会发生一个前进，那设置为true，这样所有场景都会保持已装载状态。
 
-__ps: 最新版的react-native上似乎没有`shouldJumpOnBackstackPop`这一项了__
+_ps: 最新版的react-native上似乎没有`shouldJumpOnBackstackPop`这一项了_
