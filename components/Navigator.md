@@ -192,7 +192,9 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **onItemRef** function 
 
-当场景ref发生变化时，会以`(ref, indexInStack)`这样的形式来调用它
+当场景引用发生变化时，会以`(ref, indexInStack)`这样的形式来调用
+
+_ps: `ref`是一个组件实例。_
 
 **onWillFocus** function 
 
@@ -200,7 +202,9 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **renderScene** function 
 
-必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个ref处理器来调用它，该ref处理器允许让你的场景的ref由`props.onItemRef`来提供
+必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个引用处理器来调用它，该引用处理器允许让你的场景引用由`props.onItemRef`来提供
+
+_ps: `props.onItemRef`处理器可以给`renderScene`提供初始组件。_
 
 ```javascript
 (route, navigator, onRef) =>
