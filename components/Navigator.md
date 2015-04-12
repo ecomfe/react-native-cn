@@ -194,22 +194,20 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 当场景引用发生变化时，会以`(ref, indexInStack)`这样的形式来调用
 
-_ps: `ref`是一个组件实例。_
-
 **onWillFocus** function 
 
 它覆盖了`this.props.navigator`中的处理器，并且在装载时以及每一个转场装换前，发出目标路由。这会覆盖`this.props.navigator`中的onDidFocus`处理器。
 
 **renderScene** function 
 
-必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个引用处理器来调用它，该引用处理器允许让你的场景引用由`props.onItemRef`来提供
-
-_ps: `props.onItemRef`处理器可以给`renderScene`提供初始组件。_
+必选函数，它负责渲染指定路由的场景。以路由、转场器对象、一个引用处理器来调用它，其中引用处理器允许让你的场景引用由`props.onItemRef`来提供
 
 ```javascript
 (route, navigator, onRef) =>
   <MySceneComponent title={route.title} ref={onRef} /> 
 ```
+
+_ps: 最新版的react-native上已经去掉了`onRef`参数。_
 
 **sceneStyle** [View#style](http://facebook.github.io/react-native/docs/view.html#style)
 
@@ -219,4 +217,4 @@ _ps: `props.onItemRef`处理器可以给`renderScene`提供初始组件。_
 
 退栈回退按钮应该用“跳”回取代弹出吗？如果按下android后退按钮后可能会发生一个前进，那设置为true，这样所有场景都会保持已装载状态。
 
-_ps: 最新版的react-native上似乎没有`shouldJumpOnBackstackPop`这一项了_
+_ps: 最新版的react-native上似乎没有`shouldJumpOnBackstackPop`这一项了。_
