@@ -81,6 +81,8 @@ The default wrapper style for components in the navigator. A common use case is 
 The color used for buttons in the navigation bar
 
 
+`NavigatorIOS`包装了UIKit转场功能，并且允许你在你的app中添加来回滑动的功能。
+
 ## 路由
 
 在转场中，一个路由是一个用来描述每一个页面的对象。`NavigatorIOS`的第一个路由是由`initialRoute`提供的:
