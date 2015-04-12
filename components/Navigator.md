@@ -180,7 +180,7 @@ Should the backstack back button "jump" back instead of pop? Set to true if a ju
 
 **navigationBar** node 
 
-可选地提供了一个转场条，它在场景转换的过程中依然存在
+可选地提供了一个导航条，它在场景转换的过程中依然存在
 
 **navigator** object 
 
