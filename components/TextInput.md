@@ -1,13 +1,13 @@
 基本组件在应用程序中通过键盘输入文本。他的属性有几个特点，比如自动校正，自动大写，提示信息文本，以及不同类型的键盘，如数字键盘。最简单的用例就是使用`TextInput`并订阅`onChangeText`事件来读取用户输入。还有其他事件，如`onSubmitEditing`和`onFocus`可以订阅。A simple example:
 
 ```html
-&lt;View&gt;
-  &lt;TextInput
+<View>
+  <TextInput
     style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-    onChangeText={(text) =&gt; this.setState({input: text})}
-  /&gt;
-  &lt;Text&gt;{'user input: ' + this.state.input}&lt;/Text&gt;
-&lt;/View&gt;
+    onChangeText={(text) => this.setState({input: text})}
+  />
+  <Text>{'user input: ' + this.state.input}</Text>
+</View>
 ```
 
 `value`属性可以用来设置输入的值，设置`value`是设置为TextInput的默认值，但你可以在`onChangeText`事件中持续的改变他。如果你真的想强制TextInput总是还原到你设置的值，可以设置`controlled= {true}`。`multiline`属性不是在所有版本中支持，有些属性是多行的。## 属性
