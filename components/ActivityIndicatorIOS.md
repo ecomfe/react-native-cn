@@ -24,4 +24,4 @@ Size of the indicator. Small has a height of 20, large has a height of 36.
 
 **size** enum('small', 'large') 
 
-指示器的尺寸. Small 的高度为20, large 的高度为36a.
+指示器的尺寸. Small 的高度为20, large 的高度为36.
