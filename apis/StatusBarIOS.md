@@ -96,3 +96,21 @@ var styles = StyleSheet.create({
   },
 });
 ```
+
+版权所有
+
+This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree. An additional grant of patent rights can be found in the PATENTS file in the same directory.
+
+这里的所有代码都遵循源码树的根目录下的LICENSE文件中的BSD协议。追加的专利授权可以在相同目录的PATENTS文件中找到。
+
+@flow
+
+## Methods 
+
+static **setStyle**(style: number, animated?: boolean) 
+
+设置IOS状态栏的样式。
+
+static **setHidden**(hidden: boolean, animation: number)
+
+设置IOS状态栏的西安隐状态。
