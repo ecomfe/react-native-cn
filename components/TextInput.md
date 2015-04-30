@@ -1,6 +1,4 @@
-A foundational component for inputting text into the app via a keyboard. Props provide configurability for several features, such as auto- correction, auto-capitalization, placeholder text, and different keyboard types, such as a numeric keypad.
-
-The simplest use case is to plop down a `TextInput` and subscribe to the `onChangeText` events to read the user input. There are also other events, such as `onSubmitEditing` and `onFocus` that can be subscribed to. A simple example:
+基本组件在应用程序中通过键盘输入文本。他的属性有几个特点，比如自动校正，自动大写，提示信息文本，以及不同类型的键盘，如数字键盘。最简单的用例就是使用`TextInput`并订阅`onChangeText`事件来读取用户输入。还有其他事件，如`onSubmitEditing`和`onFocus`可以订阅。A simple example:
 
 ```html
 <View>
@@ -12,85 +10,70 @@ The simplest use case is to plop down a `TextInput` and subscribe to the `onChan
 </View>
 ```
 
-The `value` prop can be used to set the value of the input in order to make the state of the component clear, but <TextInput> does not behave as a true controlled component by default because all operations are asynchronous. Setting `value` once is like setting the default value, but you can change it continuously based on `onChangeText` events as well. If you really want to force the component to always revert to the value you are setting, you can set `controlled={true}`.
-
-The `multiline` prop is not supported in all releases, and some props are multiline only.
-
-## Props 
-
+`value`属性可以用来设置输入的值，设置`value`是设置为TextInput的默认值，但你可以在`onChangeText`事件中持续的改变他。如果你真的想强制TextInput总是还原到你设置的值，可以设置`controlled= {true}`。`multiline`属性不是在所有版本中支持，有些属性是多行的。## 属性
 **autoCapitalize** enum('none', 'sentences', 'words', 'characters') 
 
-Can tell TextInput to automatically capitalize certain characters.
-
-* characters: all characters,
-* words: first letter of each word
-* sentences: first letter of each sentence (default)
-* none: don't auto capitalize anything
+他告诉TextInput自动大写某些字符。* characters: 所有字符,
+* words: 每一个单词的首字母
+* sentences: 每个句子的首字母 (默认)
+* none: 不自动大写任何字符
 
 **autoCorrect** bool 
 
-If false, disables auto-correct. Default value is true.
+如果设置为false，关闭拼写自动更正功能。 默认值是true。
 
 **autoFocus** bool 
 
-If true, focuses the input on componentDidMount. Default value is false.
+如果设置为true, 在componentDidMount时激活输入。默认值是false。
 
 **bufferDelay** number 
 
-This helps avoid drops characters due to race conditions between JS and the native text input. The default should be fine, but if you're potentially doing very slow operations on every keystroke then you may want to try increasing this.
+由于JS和原生输入组件存在竞争危害，这个属性有助于避免丢失字符。
+默认值应该是没有问题的，但如果你处理每次按键都需要很长时间，那么你可能需要增大这个值。**clearButtonMode** enum('never', 'while-editing', 'unless-editing', 'always') 
 
-**clearButtonMode** enum('never', 'while-editing', 'unless-editing', 'always') 
-
-When the clear button should appear on the right side of the text view
+何时显示清除按钮在文本视图右侧
 
 **controlled** bool 
 
-If you really want this to behave as a controlled component, you can set this true, but you will probably see flickering, dropped keystrokes, and/or laggy typing, depending on how you process onChange events.
+如果你真的希望他是可控制的组件，您可以设置为true，但你可能会看到闪烁现象，丢失按键响应，and/or laggy 输入，这些取决于你如何处理onChange事件。**editable** bool 
 
-**editable** bool 
+设置为false，文本是不可编辑的。默认值是true。**keyboardType** enum('default', 'numeric') 
 
-If false, text is not editable. Default value is true.
+确定要打开的键盘类型，比如数字键盘。**multiline** bool 
 
-**keyboardType** enum('default', 'numeric') 
+如果为true，文本输入可以是多行的。默认值是假的。**onBlur** function 
 
-Determines which keyboard to open, e.g.`numeric`.
-
-**multiline** bool 
-
-If true, the text input can be multiple lines. Default value is false.
-
-**onBlur** function 
-
-Callback that is called when the text input is blurred
+当输入框失去焦点时调用此函数
 
 **onChangeText** function 
 
-(text: string) => void
+(text: string) =&gt; void
 
-Callback that is called when the text input's text changes.
+输入的文本更改时被调用
 
 **onEndEditing** function 
 
 **onFocus** function 
 
-Callback that is called when the text input is focused
+当输入框获得焦点时被调用
+
 
 **onSubmitEditing** function 
 
 **placeholder** string 
 
-The string that will be rendered before text input has been entered
+能够让你在文本框里显示提示信息，一旦你在文本框里输入了什么信息，提示信息就会隐藏。
 
 **placeholderTextColor** string 
 
-The text color of the placeholder string
+placeholder文字的颜色
 
 **selectionState** DocumentSelectionState 
 
-See DocumentSelectionState.js, some state that is responsible for maintaining selection information for a document
+参考 DocumentSelectionState.js, 这些状态负责维护选中信息
 
 **style** [Text#style](http://facebook.github.io/react-native/docs/text.html#style)
 
 **value** string 
 
-The default value for the text input
+文字框的文字
