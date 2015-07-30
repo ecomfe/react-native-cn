@@ -151,7 +151,8 @@ PanResponder为响应处理程序提供一个可预测包，其中响应处理�
 
 static **create**(config: object) 
 
-@param {object} 提供所有应答器回调配置的增强版本，应答器回调不仅可以提供典型的`ResponderSyntheticEvent`动作状态，还可以提供`PanResponder`动作状态。在每一个典型的`onResponder*` 回调过程中，可用`PanResponder`简单替换`PanResponder`。举个例子，config对象可能看起来如下所示：
+@param {object} 提供所有应答器回调配置的增强版本，应答器回调不仅可以提供典型的`ResponderSyntheticEvent`动作状态，还可以提供`PanResponder`动作状态。在每一个典型的`onResponder*` 回调过程中，可用`PanResponder`简单替换`PanResponder`。
+举个例子，config对象可能看起来如下所示：
 
 * `onMoveShouldSetPanResponder: (e, gestureState) => {...}`
 * `onMoveShouldSetPanResponderCapture: (e, gestureState) => {...}`
