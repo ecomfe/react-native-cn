@@ -1,13 +1,14 @@
 NetInfo exposes info about online/offline status
-
+（NetInfo展现了在线/离线的状态信息）
 ## reachabilityIOS 
 
 Asyncronously determine if the device is online and on a cellular network.
+（异步决定设备是否在线和是否连接蜂窝网络。）
 
-* `none` - device is offline
-* `wifi` - device is online and connected via wifi, or is the iOS simulator
-* `cell` - device is connected via Edge, 3G, WiMax, or LTE
-* `unknown` - error case and the network status is unknown
+* `none` - device is offline （设备离线）
+* `wifi` - device is online and connected via wifi, or is the iOS simulator （设备通过wifi连接在线，或者设备是iOS模拟器）
+* `cell` - device is connected via Edge, 3G, WiMax, or LTE （设备通过Edge, 3G, WiMax或者LTE连接）
+* `unknown` - error case and the network status is unknown （错误状态，未知网络状态）
 
 ```javascript
 NetInfo.reachabilityIOS.fetch().done((reach) => {
@@ -29,6 +30,7 @@ NetInfo.reachabilityIOS.addEventListener(
 ## isConnected 
 
 Available on all platforms. Asyncronously fetch a boolean to determine internet connectivity.
+（所有平台都可获得异步获取到的一个决定网络连接布尔值。）
 
 ```javascript
 NetInfo.isConnected.fetch().done((isConnected) => {
