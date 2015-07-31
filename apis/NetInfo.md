@@ -183,7 +183,9 @@ exports.examples = [
 ];
 ```
 NetInfo展现了在线/离线的状态信息
+
 ## reachabilityIOS 
+
 异步决定设备是否在线和是否连接蜂窝网络。
 
 * `none` - 设备离线
